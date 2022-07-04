@@ -1,6 +1,7 @@
 [
   {
     "name": "Weevils",
+    "isFolder": "yes",
     "children": [
       {
         "name": "Weevil in",
@@ -56,6 +57,7 @@
   },
   {
     "name": "Rats",
+    "isFolder": "yes",
     "children": [
       {
         "name": "Rat in",
@@ -111,6 +113,7 @@
   },
   {
     "name": "Pigeons",
+    "isFolder": "yes",
     "children": [
       {
         "name": "Pigeon in",
@@ -166,25 +169,26 @@
   },
   {
     "name": "Lizards",
+    "isFolder": "yes",
     "children": [
       {
         "name": "Lizard in",
         "script": "Verminator.atk('lizard')",
         "patterns": [
           {
-            "pattern": "^With a deep croak, a .+ lizard crawls in and noses around for garbage.$",
+            "pattern": "^With a deep croak, an? .*lizard crawls in and noses around for garbage.$",
             "type": "regex"
           },
           {
-            "pattern": "^Slithering in on all fours, a .+ lizard suddenly stops and hisses at you.$",
+            "pattern": "^Slithering in on all fours, an? .*lizard suddenly stops and hisses at you.$",
             "type": "regex"
           },
           {
-            "pattern": "^Climbing out of some dirty ashes, a .+ lizard scrambles about here.$",
+            "pattern": "^Climbing out of some dirty ashes, an? .*lizard scrambles about here.$",
             "type": "regex"
           },
           {
-            "pattern": "^A .+ lizard slinks in, lashing its tail back and forth.$",
+            "pattern": "^An? .*lizard slinks in, lashing its tail back and forth.$",
             "type": "regex"
           }
         ]
@@ -194,15 +198,15 @@
         "script": "",
         "patterns": [
           {
-            "pattern": "^A .+ lizard quickly slinks off and out of view.$",
+            "pattern": "^An? .*lizard quickly slinks off and out of view.$",
             "type": "regex"
           },
           {
-            "pattern": "^Flicking its tail, a .+ lizard slithers away and disappears.$",
+            "pattern": "^Flicking its tail, an? .*lizard slithers away and disappears.$",
             "type": "regex"
           },
           {
-            "pattern": "^With a final hiss at you, a .+ lizard burrows into a pile of ashes.$",
+            "pattern": "^With a final hiss at you, an? .*lizard burrows into a pile of ashes.$",
             "type": "regex"
           }
         ]
@@ -212,7 +216,7 @@
         "script": "Verminator.gotOne('lizard')",
         "patterns": [
           {
-            "pattern": "You have slain .+ lizard.",
+            "pattern": "You have slain an? .*lizard.",
             "type": "regex"
           }
         ]

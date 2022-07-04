@@ -20,6 +20,10 @@ end
 if key == "attack" and not value:find("|t") then
   value = value .. " |t"
 end
+local numberValue = tonumber(value)
+if numberValue then
+  key = numberValue
+end
 Verminator[key] = value
 if key == "font" or key == "fontSize" then
   Verminator.makeDisp()

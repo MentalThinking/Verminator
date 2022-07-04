@@ -22,5 +22,15 @@
   {
     "name": "verminconfig",
     "regex": "^verminconfig (.+)"
+  },
+  {
+    "name": "verminshow",
+    "regex": "^(verminshow|vshow)$",
+    "script": "Verminator.container:show()"
+  },
+  {
+    "name": "verminhide",
+    "regex": "^(verminhide|vhide)$",
+    "script": "Verminator.container:hide()"
   }
 ]
