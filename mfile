@@ -1,0 +1,8 @@
+{
+  "package": "Verminator",
+  "title": "Seek out and destroy those pesky vermin!",
+  "version": "1.0.0",
+  "author": "Demonnic",
+  "icon": "computer.png",
+  "outputFile": true
+}
