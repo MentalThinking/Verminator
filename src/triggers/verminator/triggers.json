@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Weevils",
+    "children": [
+      {
+        "name": "Weevil in",
+        "patterns": [
+          {
+            "pattern": "^(.+) skitters in from the shadows of the forest\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Searching for wood, (.+) wanders into view\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^A hole opens up in a nearby tree as (.+) burrows out and falls to the ground\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Covered in wood pulp, (.+) scuttles in, its long proboscis waving in the air\\.$",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.atk('weevil')"
+      },
+      {
+        "name": "Weevil out",
+        "patterns": [
+          {
+            "pattern": "^Its long proboscis detecting some tasty wood, (.+) scuttles out of view\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^You are unable to follow (.+) as it scuttles off into the forest's shadows\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(.+) burrows into a tree and disappears\\.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "Weevil down",
+        "patterns": [
+          {
+            "pattern": "You have slain .+ weevil.",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.gotOne('weevil')"
+      }
+    ]
+  },
+  {
+    "name": "Rats",
+    "children": [
+      {
+        "name": "Rat in",
+        "patterns": [
+          {
+            "pattern": "^With a squeak, an? .*rat darts into the room, looking about wildly.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Your eyes are drawn to an? .*rat that darts suddenly into view.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^An? .*rat wanders into view, nosing about for food.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^An? .*rat noses its way cautiously out of the shadows.$",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.atk('rat')"
+      },
+      {
+        "name": "Rat out",
+        "patterns": [
+          {
+            "pattern": "^An? .*rat darts into the shadows and disappears.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^An? .*rat wanders back into its warren where you may not follow.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^With a flick of its small whiskers, an? .*rat dashes out of view.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "Rat down",
+        "patterns": [
+          {
+            "pattern": "You have slain an? .*rat.",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.gotOne('rat')"
+      }
+    ]
+  },
+  {
+    "name": "Pigeons",
+    "children": [
+      {
+        "name": "Pigeon in",
+        "patterns": [
+          {
+            "pattern": "^Flapping its wings furiously, an? .*pigeon flies in and discharges white droppings.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^A foul stench arises as an? .*pigeon enters and ruffles its feathers, spraying dirty water everywhere.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^You notice an? .*pigeon circling from above, searching for garbage.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Soaring from above, an? .*pigeon suddenly darts in and stares at you with greedy eyes.$",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.atk('pigeon')"
+      },
+      {
+        "name": "Pigeon out",
+        "patterns": [
+          {
+            "pattern": "^Discharging white droppings, an? .*pigeon flies off into the distance.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^An? .*pigeon flutters aimlessly away.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^With a loud squawk, an? .*pigeon takes wing and flies away.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "Rat down",
+        "patterns": [
+          {
+            "pattern": "You have slain an? .*pigeon.",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.gotOne('pigeon')"
+      }
+    ]
+  },
+  {
+    "name": "Lizards",
+    "children": [
+      {
+        "name": "Lizard in",
+        "script": "Verminator.atk('lizard')",
+        "patterns": [
+          {
+            "pattern": "^With a deep croak, a .+ lizard crawls in and noses around for garbage.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Slithering in on all fours, a .+ lizard suddenly stops and hisses at you.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Climbing out of some dirty ashes, a .+ lizard scrambles about here.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^A .+ lizard slinks in, lashing its tail back and forth.$",
+            "type": "regex"
+          }
+        ]
+      },
+      {
+        "name": "Lizard out",
+        "script": "",
+        "patterns": [
+          {
+            "pattern": "^A .+ lizard quickly slinks off and out of view.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^Flicking its tail, a .+ lizard slithers away and disappears.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^With a final hiss at you, a .+ lizard burrows into a pile of ashes.$",
+            "type": "regex"
+          }
+        ]
+      },
+      {
+        "name": "Lizard down",
+        "script": "Verminator.gotOne('lizard')",
+        "patterns": [
+          {
+            "pattern": "You have slain .+ lizard.",
+            "type": "regex"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "vermin gold",
+    "script": "send('sm add free get gold')",
+    "patterns": [
+      {
+        "pattern": "A small quantity of sovereigns spills from the corpse.",
+        "type": "regex"
+      }
+    ]
+  }
+]

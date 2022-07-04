@@ -1,0 +1,26 @@
+[
+  {
+    "name": "verminate",
+    "regex": "^(verminate|vstart)$",
+    "script": "Verminator.start()"
+  },
+  {
+    "name": "unverminate",
+    "regex": "^(unverminate|vstop)$",
+    "script": "Verminator.stop()"
+  },
+  {
+    "name": "verminpause",
+    "regex": "^(verminpause|vp)$",
+    "script": "Verminator.pause()"
+  },
+  {
+    "name": "vermincont",
+    "regex": "^(vermincont|vc)$",
+    "script": "Verminator.continue()"
+  },
+  {
+    "name": "verminconfig",
+    "regex": "^verminconfig (.+)"
+  }
+]
