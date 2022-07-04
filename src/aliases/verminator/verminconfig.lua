@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil
 local defaults = Verminator.defaults
 local validOptions = table.keys(defaults)
 local optionsTable = matches[2]:split(" ")
@@ -13,7 +14,7 @@ end
 if key == "font" then
   local validFonts = getAvailableFonts()
   if not validFonts[value] then
-    cecho(f"<red>VERMINATOR:<r>Font {value} is not in the font list for Mudlet, please try again")
+    cecho(f"<red>VERMINATOR:<r> Font {value} is not in the font list for Mudlet, please try again")
     return
   end
 end
@@ -22,7 +23,8 @@ if key == "attack" and not value:find("|t") then
 end
 local numberValue = tonumber(value)
 if numberValue then
-  key = numberValue
+---@diagnostic disable-next-line: cast-local-type
+  value = numberValue
 end
 Verminator[key] = value
 if key == "font" or key == "fontSize" then

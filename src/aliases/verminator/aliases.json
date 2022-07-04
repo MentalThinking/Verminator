@@ -21,7 +21,7 @@
   },
   {
     "name": "verminconfig",
-    "regex": "^verminconfig (.+)"
+    "regex": "^vconfig (.+)"
   },
   {
     "name": "verminshow",
