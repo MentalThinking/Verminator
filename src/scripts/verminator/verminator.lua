@@ -89,7 +89,7 @@ function Verminator.kill()
     Verminator.move()
     return
   end
-  enableTrigger("Verminator")
+  enableTrigger("verminator")
   Verminator.startTimer()
   Verminator.room_vermin = 0
 end
@@ -97,7 +97,7 @@ end
 function Verminator.move()
   demonwalker:echo("moving on")
   Verminator.stopTimer()
-  disableTrigger("Verminator")
+  disableTrigger("verminator")
   raiseEvent("demonwalker.move")
 end
 
