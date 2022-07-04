@@ -4,27 +4,33 @@ The **PREMIER** method of exterminating vermin in Lusternia
 
 ## Dependencies
 
-Requires the demonnic auto walker, available [HERE](https://github.com/demonnic/demonnicAutoWalker)
+* You need the statagems skill in game, as I use that for the queue
+* You need to be able to kill the vermin in one attack, so probably not best for super baby characters. I may fix this at some point.
+* Requires the demonnic auto walker, available [HERE](https://github.com/demonnic/demonnicAutoWalker)
 
 ## Usage
 
-* verminate
+* `verminate`
   * begin the weevil genocide!
-* vstart
+* `vstart`
   * see verminate
-* unverminate
+* `unverminate`
   * Fine, give up and stop killing the enemy. Will return to where you started.
-* vstop
+* `vstop`
   * see unverminate
-* vpause
+* `vpause`
   * Grant the vermin masses temporary reprieve from your wrath
-* vcont
+* `vcont`
   * Clemency is over, time once more to DIE!
-* vshow
+* `vshow`
   * Show the stats window for Verminator
-* vhide
+* `vhide`
   * Hide the stats window for Verminator
-* vconfig
+* `vsave`
+  * save your Verminator config to disk
+* `vload`
+  * load your Verminator config from disk
+* `vconfig <option> <value>`
   * Used to set configuration options
   * valid options are
     * max_vermin_per_room

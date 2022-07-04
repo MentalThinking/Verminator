@@ -32,5 +32,15 @@
     "name": "verminhide",
     "regex": "^(verminhide|vhide)$",
     "script": "Verminator.container:hide()"
+  },
+  {
+    "name": "verminsave",
+    "regex": "^(verminsave|vsave)$",
+    "script": "Verminator.save()"
+  },
+  {
+    "name": "verminload",
+    "regex": "^(verminload|vload)$",
+    "script": "Verminator.load()"
   }
 ]
