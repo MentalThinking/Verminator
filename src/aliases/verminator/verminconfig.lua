@@ -4,7 +4,7 @@ local validOptions = table.keys(defaults)
 local optionsTable = matches[2]:split(" ")
 local key = table.remove(optionsTable, 1)
 if not table.index_of(validOptions, key) then
-  cecho(f"<red>VERMINATOR:<r> Unable to set option {key}, valid options are {table.concat(validOptiosn, ', ')}")
+  cecho(f"<red>VERMINATOR:<r> Unable to set option {key}, valid options are {table.concat(validOptions, ', ')}")
   return
 end
 local value = table.concat(optionsTable, " ")

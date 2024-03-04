@@ -156,7 +156,7 @@
         "script": ""
       },
       {
-        "name": "Rat down",
+        "name": "Pigeon down",
         "patterns": [
           {
             "pattern": "You have slain an? .*pigeon.",
@@ -220,6 +220,94 @@
             "type": "regex"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Pinchers",
+    "isFolder": "yes",
+    "children": [
+      {
+        "name": "Pincher in",
+        "patterns": [
+          {
+            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of a giant ugly pincher.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "An ugly pincher scuttles in, searching for food.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "A tiny pincher scuttles in, searching for food.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "A giant ugly pincher enters, scavenging for flesh.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "An ugly pincher enters, scavenging for flesh.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "A tiny pincher enters, scavenging for flesh.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of a tiny pincher.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "A giant ugly pincher scuttles in, searching for food.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of an ugly pincher.",
+            "type": "exact match"
+          }
+        ],
+        "script": "Verminator.atk('pincher')"
+      },
+      {
+        "name": "Pincher out",
+        "patterns": [
+          {
+            "pattern": "Mandibles clicking, a tiny pincher scuttles away to a safe crevice.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "Mandibles clicking, an ugly pincher scuttles away to a safe crevice.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "Mandibles clicking, a giant ugly pincher scuttles away to a safe crevice.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "An giant ugly pincher trundles off into a dark corner and out of sight.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "An ugly pincher trundles off into a dark corner and out of sight.",
+            "type": "exact match"
+          },
+          {
+            "pattern": "A tiny pincher trundles off into a dark corner and out of sight.",
+            "type": "exact match"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "Pincher down",
+        "patterns": [
+          {
+            "pattern": "^Having slain (.+), you retrieve the corpse.$",
+            "type": "regex"
+          }
+        ],
+        "script": "Verminator.gotOne('pincher')"
       }
     ]
   },

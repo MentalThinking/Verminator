@@ -5,6 +5,7 @@ Verminator = Verminator or {
     fontSize = 18,
     font = "Ubuntu Mono",
     attack = "kill |t",
+    queue_action = "none"
   }
 }
 
@@ -21,6 +22,7 @@ function Verminator.save()
     fontSize = Verminator.fontSize,
     font = Verminator.font,
     attack = Verminator.attack,
+    queue_action = Verminator.queue_action,
   }
   table.save(confFile, cfg)
 end
@@ -35,6 +37,16 @@ function Verminator.load()
   Verminator.fontSize = cfg.fontSize or 18
   Verminator.font = cfg.font or "Ubuntu Mono"
   Verminator.attack = cfg.attack or "kill |t"
+  Verminator.queue_action = cfg.queue_action or "none"
+end
+
+function Verminator.getQueue()
+  local game = gmcp.External.Discord.Status.game
+  if game == "Aetolia" then
+  Verminator.queue_action = "qeb "
+  elseif game == "Lusternia" then
+  Verminator.queue_action = "sm add "
+  end
 end
 
 function Verminator.atk(tgt)
@@ -44,12 +56,14 @@ function Verminator.atk(tgt)
     return
   end
   local attack = Verminator.attack:gsub("|t", tgt)
-  send("sm add " .. attack)
+  send(""..Verminator.queue_action.."" .. attack)
   Verminator.startTimer()
 end
 
 function Verminator.gotOne(tgt)
-  send("sm add free get " .. tgt)
+  if Verminator.queue_action == "sm add " then 
+    send(""..Verminator.queue_action.." get " .. tgt)
+    end
   Verminator.room_vermin = (Verminator.room_vermin or 0) + 1
   Verminator.total_killed_vermin = Verminator.total_killed_vermin + 1
   if Verminator.room_vermin >= Verminator.max_vermin_per_room then
@@ -109,6 +123,9 @@ function Verminator.start(options)
   if not Verminator.container then
     Verminator.makeDisp()
   end
+  if Verminator.queue_action == "none" then
+  Verminator.getQueue()
+  end
   Verminator.total_killed_vermin = 0
   send("vermin")
   demonwalker:init(options)
@@ -162,7 +179,9 @@ end
 function Verminator.makeDisp()
   Verminator.container = Adjustable.Container:new({
     name = "VerminatorContainer",
-    attached = "left"
+    x = 0, y = 0,
+    width = "50%",
+    height = "50%",
   })
   Verminator.console = Geyser.MiniConsole:new({
     name = "VerminatorConsole",
